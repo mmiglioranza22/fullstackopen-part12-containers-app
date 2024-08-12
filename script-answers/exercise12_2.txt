@@ -1,0 +1,49 @@
+Script started on Mon Aug 12 16:46:44 2024
+[1m[7m%[27m[1m[0m                                                                                                                                                 ]2;mmiglioranza@Manuels-MBP:~/Documents/github/fso-exercises/part12-containers-applications-main]1;..ications-main]7;file://Manuels-MBP.fibertel.com.ar/Users/mmiglioranza/Documents/github/fso-exercises/part12-containers-applications-main\[0m[27m[24m[J[01;32m➜  [36mpart12-containers-applications-main[00m [K[?1h=[?2004h[0m[27m[24m[J[01;32m➜  [36mpart12-containers-applications-main[00m [01;34mgit:([31mmain[34m) [33m✗[00m [Kd oopen -a Docker[?1l>[?2004l
+]2;open -a Docker]1;open[1m[7m%[27m[1m[0m                                                                                                                                                 ]2;mmiglioranza@Manuels-MBP:~/Documents/github/fso-exercises/part12-containers-applications-main]1;..ications-main]7;file://Manuels-MBP.fibertel.com.ar/Users/mmiglioranza/Documents/github/fso-exercises/part12-containers-applications-main\[0m[27m[24m[J[01;32m➜  [36mpart12-containers-applications-main[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004ho ddod   cclear[?1l>[?2004l
+]2;clear]1;clear[3J[H[2J[1m[7m%[27m[1m[0m                                                                                                                                                 ]2;mmiglioranza@Manuels-MBP:~/Documents/github/fso-exercises/part12-containers-applications-main]1;..ications-main]7;file://Manuels-MBP.fibertel.com.ar/Users/mmiglioranza/Documents/github/fso-exercises/part12-containers-applications-main\[0m[27m[24m[J[01;32m➜  [36mpart12-containers-applications-main[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004hddocker container run hello-world[?1l>[?2004l
+]2;docker container run hello-world]1;docker
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (arm64v8)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+[1m[7m%[27m[1m[0m                                                                                                                                                 ]2;mmiglioranza@Manuels-MBP:~/Documents/github/fso-exercises/part12-containers-applications-main]1;..ications-main]7;file://Manuels-MBP.fibertel.com.ar/Users/mmiglioranza/Documents/github/fso-exercises/part12-containers-applications-main\[0m[27m[24m[J[01;32m➜  [36mpart12-containers-applications-main[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004h[7mdocker run -it ubuntu bash[27m[26D[27md[27mo[27mc[27mk[27me[27mr[27m [27mr[27mu[27mn[27m [27m-[27mi[27mt[27m [27mu[27mb[27mu[27mn[27mt[27mu[27m [27mb[27ma[27ms[27mh[?1l>[?2004l
+]2;docker run -it ubuntu bash]1;dockerUnable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+
+[1A[2Keed1663d2238: Pulling fs layer [1B[1A[2Keed1663d2238: Downloading [>                                                  ]  298.2kB/28.84MB[1B[1A[2Keed1663d2238: Downloading [===>                                               ]  2.059MB/28.84MB[1B[1A[2Keed1663d2238: Downloading [======>                                            ]  3.533MB/28.84MB[1B[1A[2Keed1663d2238: Downloading [========>                                          ]  5.024MB/28.84MB[1B[1A[2Keed1663d2238: Downloading [===========>                                       ]  6.511MB/28.84MB[1B[1A[2Keed1663d2238: Downloading [=============>                                     ]  7.994MB/28.84MB[1B[1A[2Keed1663d2238: Downloading [================>                                  ]  9.472MB/28.84MB[1B[1A[2Keed1663d2238: Downloading [==================>                                ]  10.93MB/28.84MB[1B[1A[2Keed1663d2238: Downloading [=====================>                             ]  12.12MB/28.84MB[1B[1A[2Keed1663d2238: Downloading [=======================>                           ]   13.6MB/28.84MB[1B[1A[2Keed1663d2238: Downloading [==========================>                        ]  15.08MB/28.84MB[1B[1A[2Keed1663d2238: Downloading [============================>                      ]  16.56MB/28.84MB[1B[1A[2Keed1663d2238: Downloading [===============================>                   ]  18.02MB/28.84MB[1B[1A[2Keed1663d2238: Downloading [=================================>                 ]   19.5MB/28.84MB[1B[1A[2Keed1663d2238: Downloading [====================================>              ]  20.99MB/28.84MB[1B[1A[2Keed1663d2238: Downloading [======================================>            ]  22.47MB/28.84MB[1B[1A[2Keed1663d2238: Downloading [=========================================>         ]  23.95MB/28.84MB[1B[1A[2Keed1663d2238: Downloading [============================================>      ]  25.43MB/28.84MB[1B[1A[2Keed1663d2238: Downloading [==============================================>    ]  26.91MB/28.84MB[1B[1A[2Keed1663d2238: Downloading [================================================>  ]  27.79MB/28.84MB[1B[1A[2Keed1663d2238: Verifying Checksum [1B[1A[2Keed1663d2238: Download complete [1B[1A[2Keed1663d2238: Extracting [>                                                  ]  294.9kB/28.84MB[1B[1A[2Keed1663d2238: Extracting [=========>                                         ]  5.308MB/28.84MB[1B[1A[2Keed1663d2238: Extracting [==============>                                    ]  8.552MB/28.84MB[1B[1A[2Keed1663d2238: Extracting [=====================>                             ]  12.68MB/28.84MB[1B[1A[2Keed1663d2238: Extracting [==================================>                ]  19.76MB/28.84MB[1B[1A[2Keed1663d2238: Extracting [=========================================>         ]  24.18MB/28.84MB[1B[1A[2Keed1663d2238: Extracting [==============================================>    ]  26.84MB/28.84MB[1B[1A[2Keed1663d2238: Extracting [=================================================> ]  28.31MB/28.84MB[1B[1A[2Keed1663d2238: Extracting [==================================================>]  28.84MB/28.84MB[1B[1A[2Keed1663d2238: Pull complete [1BDigest: sha256:2e863c44b718727c860746568e1d54afd13b2fa71b160f5cd9058fc436217b30
+Status: Downloaded newer image for ubuntu:latest
+[?2004h]0;root@d8dea77d5d6c: /root@d8dea77d5d6c:/# ls
+[?2004l[0m[01;36mbin[0m  [01;34mboot[0m  [01;34mdev[0m  [01;34metc[0m  [01;34mhome[0m  [01;36mlib[0m  [01;34mmedia[0m  [01;34mmnt[0m  [01;34mopt[0m  [01;34mproc[0m  [01;34mroot[0m  [01;34mrun[0m  [01;36msbin[0m  [01;34msrv[0m  [01;34msys[0m  [30;42mtmp[0m  [01;34musr[0m  [01;34mvar[0m
+[?2004h]0;root@d8dea77d5d6c: /root@d8dea77d5d6c:/# cd usr/
+bin/     games/   include/ lib/     libexec/ local/   sbin/    share/   src/     
+]0;root@d8dea77d5d6c: /root@d8dea77d5d6c:/# cd usr/src/] 
+[?2004l[?2004h]0;root@d8dea77d5d6c: /usr/srcroot@d8dea77d5d6c:/usr/src# ls
+[?2004l[?2004h]0;root@d8dea77d5d6c: /usr/srcroot@d8dea77d5d6c:/usr/src# k mkdir app
+[?2004l[?2004h]0;root@d8dea77d5d6c: /usr/srcroot@d8dea77d5d6c:/usr/src# xs    cd app/
+[?2004l[?2004h]0;root@d8dea77d5d6c: /usr/src/approot@d8dea77d5d6c:/usr/src/app# touch index.js
+[?2004l[?2004h]0;root@d8dea77d5d6c: /usr/src/approot@d8dea77d5d6c:/usr/src/app# echo ''d'a'e'[1P'l'e' 'b'o'c'a'' >> index.js 
+[?2004l[?2004h]0;root@d8dea77d5d6c: /usr/src/approot@d8dea77d5d6c:/usr/src/app# cat index.js 
+[?2004ldale boca
+[?2004h]0;root@d8dea77d5d6c: /usr/src/approot@d8dea77d5d6c:/usr/src/app# exit
+[?2004lexit
+[1m[7m%[27m[1m[0m                                                                                                                                                 ]2;mmiglioranza@Manuels-MBP:~/Documents/github/fso-exercises/part12-containers-applications-main]1;..ications-main]7;file://Manuels-MBP.fibertel.com.ar/Users/mmiglioranza/Documents/github/fso-exercises/part12-containers-applications-main\[0m[27m[24m[J[01;32m➜  [36mpart12-containers-applications-main[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004heexit[?1l>[?2004l
+]2;exit]1;exit
+Script done on Mon Aug 12 16:49:31 2024
