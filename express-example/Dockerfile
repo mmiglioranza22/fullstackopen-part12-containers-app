@@ -24,9 +24,12 @@ WORKDIR /usr/src/app
 # copy as non root user (more secure)
 COPY --chown=node:node . .
 # clean install, respect package.lock, delete modules each time
-RUN npm ci 
+RUN npm ci --only=production 
 
 ENV DEBUG=playground:*
+# Needed for some frameworks (express) to enable specific prod related behaviour
+# ENV NODE_ENV production
+
  
 USER node
 
