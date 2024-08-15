@@ -1,0 +1,19 @@
+services:
+  mongo:
+    image: mongo
+    ports:
+      - 3456:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: the_database
+    # Bind mount is the act of binding a file (or directory) on the host machine to a file (or directory) in the container.
+    # A bind mount is done by adding a -v flag with container run. The syntax is -v FILE-IN-HOST:FILE-IN-CONTAINER.
+    # -> Changes to either file will be available in the other
+    volumes: 
+      - ./mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
+      # - mongo_data:/data/db # bind mount, should punt mongo_data in gitignore file
+
+volumes:
+  mongo_data:
+
