@@ -1,6 +1,7 @@
 const express = require('express');
 const { Todo } = require('../mongo')
 const router = express.Router();
+const redis = require("../redis")
 
 /* DELETE todo. */
 router.delete('/', async (req, res) => {
@@ -38,6 +39,13 @@ router.post('/', async (req, res) => {
     text: req.body.text,
     done: false
   })
+  if (todo) {
+    const value = await redis.getAsync('added_todos')
+    const add = await redis.setAsync("added_todos", Number(value) + 1)
+
+    console.log({value, add})
+
+  }
   res.send(todo);
 });
 
