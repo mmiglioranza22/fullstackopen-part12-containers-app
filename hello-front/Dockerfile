@@ -12,6 +12,8 @@
 
 # CMD ["serve", "dist"]
 
+
+# MULTISTAGE builds
 # The first FROM is now a stage called build-stage
 
 FROM node:20 AS build-stage 
