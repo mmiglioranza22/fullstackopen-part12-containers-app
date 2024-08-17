@@ -21,6 +21,8 @@ describe("<Todo />", () => {
         notDoneInfo={todoTest.notDoneInfo}
       />
     );
-    screen.debug();
+
+    const text = screen.getByText("text todo");
+    expect(text).toBeDefined();
   });
 });
