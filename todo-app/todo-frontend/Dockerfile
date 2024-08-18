@@ -8,11 +8,13 @@ COPY . .
 
 RUN npm ci
 
-ENV VITE_BACKEND_URL="http://localhost:3000/"
+# ENV VITE_BACKEND_URL="http://localhost:3000/api"
 
 RUN npm run build
 
 RUN npm run test
+
+# CMD ["npm", "run", "preview", "--", "--host"]
 
 # This is a new stage, everything before this is gone, except for the files that we want to COPY
 
@@ -22,4 +24,12 @@ FROM nginx:1.25-alpine
 # The target location here was found from the Docker hub page
 
 COPY --from=build-stage /usr/src/app/dist /usr/share/nginx/html
+
+COPY nginx.conf /etc/nginx/
+
+EXPOSE 9080
+
+CMD ["nginx", "-g", "daemon off;"]
+
+
 # docker run -p 8000:80 todo-front
