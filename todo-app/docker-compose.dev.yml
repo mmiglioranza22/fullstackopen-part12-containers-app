@@ -1,0 +1,23 @@
+services:
+  web:
+    image: todo-frontend-image
+    build:
+      context: ./todo-frontend
+      dockerfile: dev.Dockerfile
+    volumes:
+      # this is what enables correcly the development server, it needs to reference the directory
+      # where the package.json exists
+      - ./todo-frontend:/usr/src/app
+    ports:
+      - 5173:5173
+    container_name: todo-frontend-container
+
+  nginx:
+    image: nginx:1.20.1
+    volumes:
+      - ./nginx.dev.conf:/etc/nginx/nginx.conf:ro # read-only
+    ports:
+      - 8080:80
+    container_name: reverse-proxy-todo
+    depends_on:
+      - web # wait for the frontend container to be started, it does not check if it is ready to receive requests !! https://docs.docker.com/compose/startup-order/

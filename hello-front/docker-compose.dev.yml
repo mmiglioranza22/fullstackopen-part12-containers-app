@@ -16,7 +16,7 @@ services:
       - ./nginx.dev.conf:/etc/nginx/nginx.conf:ro # read-only
     ports:
       - 8080:80
-    container_name: reverse-proxy
+    container_name: reverse-proxy-hello
     depends_on:
       - app # wait for the frontend container to be started, it does not check if it is ready to receive requests !! https://docs.docker.com/compose/startup-order/
 
