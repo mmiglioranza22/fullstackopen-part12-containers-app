@@ -9,6 +9,10 @@ services:
       dockerfile: dev.Dockerfile # This will simply tell which dockerfile to read
     ports:
       - 3000:3000
+      # adding the root directory as a bind mount volume (otherwise, ./src depending on the structure)
+      # is what allows nodemon to watch on file changes (and makes sense since volumes are reads/writes to outside world)
+    volumes:
+      - ".:/usr/src/app"
     # https://docs.docker.com/compose/networking/
     #  redis://SERVICE_NAME:CONTAINER_PORT
     environment:
