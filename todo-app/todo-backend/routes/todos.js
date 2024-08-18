@@ -4,9 +4,12 @@ const router = express.Router();
 const redis = require("../redis")
 
 /* DELETE todo. */
-router.delete('/', async (req, res) => {
-  await req.todo.delete()  
-  res.sendStatus(200);
+router.delete('/:id', async (req, res) => {
+  const { id } = req.params
+  const todo = await Todo.findByIdAndDelete(id)
+  if (!todo) res.sendStatus(404); 
+  res.status(200).json(todo)
+
 });
 
 /* GET todo. */
