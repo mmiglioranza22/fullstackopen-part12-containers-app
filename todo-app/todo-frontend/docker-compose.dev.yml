@@ -1,6 +1,8 @@
+name: todo-frontend-app
+
 services:
-  app:
-    image: todo-frontend
+  web:
+    image: todo-frontend-image
     build:
       context: .
       dockerfile: dev.Dockerfile

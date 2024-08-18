@@ -7,5 +7,5 @@ COPY --chown=node:node . .
 RUN npm ci
 
 USER node
-
-CMD npm start
+ 
+CMD echo "containerized server start..." && echo "REDIS_URL=${REDIS_URL}" && echo "MONGO_URL=${MONGO_URL}" && npm run dev:container

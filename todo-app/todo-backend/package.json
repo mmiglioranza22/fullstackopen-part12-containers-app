@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "nodemon --env-file .env ./bin/www"
+    "dev": "nodemon --env-file .env ./bin/www",
+    "dev:container": "nodemon ./bin/www"
   },
   "dependencies": {
     "cors": "^2.8.5",
