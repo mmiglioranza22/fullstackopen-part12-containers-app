@@ -9,3 +9,22 @@ services:
     ports:
       - 5173:5173
     container_name: hello-front-dev # This will name the container hello-front-dev
+
+  nginx:
+    image: nginx:1.20.1
+    volumes:
+      - ./nginx.dev.conf:/etc/nginx/nginx.conf:ro # read-only
+    ports:
+      - 8080:80
+    container_name: reverse-proxy
+    depends_on:
+      - app # wait for the frontend container to be started, it does not check if it is ready to receive requests !! https://docs.docker.com/compose/startup-order/
+
+# Connecting to http://localhost:8080 will lead to a familiar-looking page with 502 status.
+
+# This is because directing requests to http://localhost:5173 leads to nowhere as the Nginx container 
+# does not have an application running in port 5173. By definition, localhost refers to the current computer 
+# used to access it. Since the localhost is unique for each container, it always points to the container itself.
+
+# Docker Compose has set up a network when we ran docker compose up
+# you access app with SERVICE_NAME:CONTAINER_PORT (http://app:5173)
