@@ -8,7 +8,9 @@ COPY . .
 
 RUN npm ci
 
-# ENV VITE_BACKEND_URL="http://localhost:3000/api"
+# set the URL that will be managed by nginx service in todo-app compose.yml
+ENV VITE_BACKEND_URL="http://localhost:8080/api" 
+# ENV NODE_ENV=production
 
 RUN npm run build
 
